@@ -1,0 +1,513 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1763448693517
+  modified: 1763448693517
+  description: ""
+collection:
+  - name: Ampara
+    meta:
+      id: fld_25726b29d7294ee991b17008bbc1aa4e
+      created: 1763448743992
+      modified: 1763448743992
+      sortKey: -1763448743992
+      description: ""
+    children:
+      - name: User
+        meta:
+          id: fld_e671d46e0ed9484e9e3334de461e1817
+          created: 1763448753385
+          modified: 1763448753385
+          sortKey: -1763448753385
+          description: ""
+        children:
+          - url: localhost:3000/user
+            name: Create
+            meta:
+              id: req_3e297da42f1f4c658775de1613589abb
+              created: 1763448756713
+              modified: 1763700209406
+              isPrivate: false
+              description: ""
+              sortKey: -1763448756713
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "name": "admin",
+                  "email": "admin@ampara.com",
+                  "phone": "+55 00 00000-0000",
+                  "password": "SenhaForte123",
+                  "description": "Admin.",
+                  "birth": "1995-04-12",
+                  "city": "Pelotas",
+                  "state": "RS",
+                  "profile": "mediator"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/user/
+            name: FindOne
+            meta:
+              id: req_fd817c72429249baad36684b60f33e9d
+              created: 1763526084322
+              modified: 1763528094780
+              isPrivate: false
+              description: ""
+              sortKey: -1763526084322
+            method: GET
+            parameters:
+              - id: pair_0ec13a2201764885a9727ccee75496b9
+                name: id
+                value: 691d4d46f8870d0ad4ce619c
+                description: ""
+                disabled: false
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/user/691d4d46f8870d0ad4ce619c
+            name: Update
+            meta:
+              id: req_db11768536e84a73a4031b20e9466183
+              created: 1763527617452
+              modified: 1763528955446
+              isPrivate: false
+              description: ""
+              sortKey: -1763527617452
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >
+                {
+                  "name": "Ana Paula Souza Silva",
+                  "email": "ana.souza@example.com",
+                  "phone": "+55 81 99999-1234",
+                  "password": "SenhaForte123",
+                  "description": "Moradora do Recife, interessada em projetos de apoio psicológico comunitário.",
+                  "document": "12345678909",
+                  "birth": "1995-04-12",
+                  "city": "Recife",
+                  "state": "PE",
+                  "profile": "person"
+                }
+            parameters:
+              - id: pair_59700a2e417f453b8e61fcd4e79ab5db
+                name: id
+                value: 691d4d46f8870d0ad4ce619c
+                description: ""
+                disabled: true
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/user/691e0d2d8221de4ba87baa22
+            name: Change Password
+            meta:
+              id: req_b3e692fc4a8442819075d256be8df10a
+              created: 1763529447122
+              modified: 1763577163184
+              isPrivate: false
+              description: ""
+              sortKey: -1763529447122
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "currentPassword": "SenhaForte123", 
+                  "newPassword": "novasenha22",
+                  "confirmNewPassword": "novasenha22"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/auth/login
+            name: Login
+            meta:
+              id: req_a33b369730c34a6fab9f28b99defa1fd
+              created: 1763531033379
+              modified: 1763703477203
+              isPrivate: false
+              description: ""
+              sortKey: -1763531033379
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "email": "andreimajada@example.com",
+                  "password": "SenhaForte123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Request
+        meta:
+          id: fld_7bcef710fff548e0850e4827fc7c9391
+          created: 1763681596384
+          modified: 1763681596384
+          sortKey: -1763681596384
+          description: ""
+        children:
+          - url: localhost:3000/request
+            name: Create
+            meta:
+              id: req_e214c26169dc42b5b48a9652ed556519
+              created: 1763681598943
+              modified: 1763686671137
+              isPrivate: false
+              description: ""
+              sortKey: -1763681598943
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "userMessage": "Preciso de ajuda com suporte psicológico"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_959559fab5de44499fd849fd3dad6814
+              - name: User-Agent
+                value: insomnia/12.0.0
+                id: pair_8b57499bcd504783be633e63b7d7b8bd
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmYjhmNWNhN2JkZjY5NDNlZTVlNWIiLCJlbWFpbCI6ImNhcm9sQGV4YW1wbGUuY29tIiwicHJvZmlsZSI6InBlcnNvbiIsImlhdCI6MTc2MzY4NjY1OSwiZXhwIjoxNzYzNzczMDU5fQ.41nah0H0DGDzxday1jAGuuP8ag1AaMMxuTuyZJFEJuw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/user
+            name: Find User Requests
+            meta:
+              id: req_009982f46d5a4d448f6c7b50e1274986
+              created: 1763684156505
+              modified: 1763704937980
+              isPrivate: false
+              description: ""
+              sortKey: -1763684156505
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmYjhjYmNhN2JkZjY5NDNlZTVlNTYiLCJlbWFpbCI6ImFuZHJlaW1hamFkYUBleGFtcGxlLmNvbSIsInByb2ZpbGUiOiJoZWxwZXIiLCJuYW1lIjoiQW5kcmVpIE1hamFkYSIsImlhdCI6MTc2MzcwNDkzMSwiZXhwIjoxNzYzNzkxMzMxfQ.5DEIumjhYsWpYmITB80t3yTIECZyAK5iTtbpbRTFjac
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/691fac0b4fdc183c597ff64b
+            name: Update Request
+            meta:
+              id: req_d8e55983b9864e279505aa15869c2d3a
+              created: 1763684750712
+              modified: 1763703307726
+              isPrivate: false
+              description: ""
+              sortKey: -1763684750712
+            method: PATCH
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "userMessage": "Preciso de ajuda com suporte psicológico"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/offer-support/691fb911ca7bdf6943ee5e5f
+            name: Offer Help
+            meta:
+              id: req_4bab37ba8fed4ab39e66784dd3f2ce0a
+              created: 1763686408768
+              modified: 1763686716836
+              isPrivate: false
+              description: ""
+              sortKey: -1763686408768
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmYjhjYmNhN2JkZjY5NDNlZTVlNTYiLCJlbWFpbCI6ImFuZHJlaW1hamFkYUBleGFtcGxlLmNvbSIsInByb2ZpbGUiOiJwZXJzb24iLCJpYXQiOjE3NjM2ODY2OTksImV4cCI6MTc2Mzc3MzA5OX0.72HRQScMSuyYl1wot_k85p8OrUVblGOYnrPeWsNDnUE
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/mediator/active
+            name: Find Mediator Active
+            meta:
+              id: req_8890fc6b0aad4a1294f4f5c052d5d486
+              created: 1763700011924
+              modified: 1763703039497
+              isPrivate: false
+              description: ""
+              sortKey: -1763682877724
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmZWRmMjk4ODA0MGE5NDcwY2Q2YjYiLCJlbWFpbCI6ImFkbWluQGFtcGFyYS5jb20iLCJwcm9maWxlIjoibWVkaWF0b3IiLCJpYXQiOjE3NjM3MDMwMTAsImV4cCI6MTc2Mzc4OTQxMH0.rZJCqGSDV02QHHu1lF8LYuWFWh7wuk7I4v0p2mrJ4WA
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/mediator/691fb911ca7bdf6943ee5e5f
+            name: Mediator Find One
+            meta:
+              id: req_1ff14c1ed0dd4b0dacc51e3f7acfa834
+              created: 1763700832603
+              modified: 1763702017083
+              isPrivate: false
+              description: ""
+              sortKey: -1763682238333.5
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmZWRmMjk4ODA0MGE5NDcwY2Q2YjYiLCJlbWFpbCI6ImFkbWluQGFtcGFyYS5jb20iLCJwcm9maWxlIjoibWVkaWF0b3IiLCJpYXQiOjE3NjM3MDAyMjIsImV4cCI6MTc2Mzc4NjYyMn0.MQVGSpzE6OC7OpQpXRSALg36YGilcdQ3ZZPs1L4JOjg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/helper/active
+            name: Find Helper Active
+            meta:
+              id: req_063ef072c9f94397b75ed5a3ad4e9ddf
+              created: 1763701018257
+              modified: 1763701261633
+              isPrivate: false
+              description: ""
+              sortKey: -1763682558028.75
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmYjhjYmNhN2JkZjY5NDNlZTVlNTYiLCJlbWFpbCI6ImFuZHJlaW1hamFkYUBleGFtcGxlLmNvbSIsInByb2ZpbGUiOiJoZWxwZXIiLCJpYXQiOjE3NjM3MDEyMDUsImV4cCI6MTc2Mzc4NzYwNX0.HB6fBOkqmJ0hevURSKSj1tE4bzIe86Wiwge5HJ7GCWw
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/helper/691fb911ca7bdf6943ee5e5f
+            name: Helper Find One
+            meta:
+              id: req_814fa420782c4fa788d862556a15a8a1
+              created: 1763701907508
+              modified: 1763701922693
+              isPrivate: false
+              description: ""
+              sortKey: -1763681918638.25
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmZWRmMjk4ODA0MGE5NDcwY2Q2YjYiLCJlbWFpbCI6ImFkbWluQGFtcGFyYS5jb20iLCJwcm9maWxlIjoibWVkaWF0b3IiLCJpYXQiOjE3NjM3MDAyMjIsImV4cCI6MTc2Mzc4NjYyMn0.MQVGSpzE6OC7OpQpXRSALg36YGilcdQ3ZZPs1L4JOjg
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: localhost:3000/request/accept-supporter/691fb911ca7bdf6943ee5e5f
+            name: Accept helper
+            meta:
+              id: req_4e4639d3bf5c40cb92161947ae2940e8
+              created: 1763702854657
+              modified: 1763703019265
+              isPrivate: false
+              description: ""
+              sortKey: -1763702854657
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"supporterId": "691fb8cbca7bdf6943ee5e56"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/12.0.0
+            authentication:
+              type: bearer
+              token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTFmZWRmMjk4ODA0MGE5NDcwY2Q2YjYiLCJlbWFpbCI6ImFkbWluQGFtcGFyYS5jb20iLCJwcm9maWxlIjoibWVkaWF0b3IiLCJpYXQiOjE3NjM3MDMwMTAsImV4cCI6MTc2Mzc4OTQxMH0.rZJCqGSDV02QHHu1lF8LYuWFWh7wuk7I4v0p2mrJ4WA
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Terms
+        meta:
+          id: fld_6ac3e8f79ac14ed19539170f55e21db2
+          created: 1763688227669
+          modified: 1763688227669
+          sortKey: -1763688227670
+          description: ""
+        children:
+          - url: localhost:3000/terms
+            name: Terms
+            meta:
+              id: req_b82cd74cee054616b15bf6c922721a00
+              created: 1763688253676
+              modified: 1763688316961
+              isPrivate: false
+              description: ""
+              sortKey: -1763688253676
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: About
+        meta:
+          id: fld_b85c98f1ac3f48a8a8f2ba2c897dbc42
+          created: 1763688234866
+          modified: 1763688234866
+          sortKey: -1763688234866
+          description: ""
+        children:
+          - url: localhost:3000/about
+            name: About
+            meta:
+              id: req_e487ffdfd2eb487c9eb180a433bfc6b6
+              created: 1763688238225
+              modified: 1763688303426
+              isPrivate: false
+              description: ""
+              sortKey: -1763688238225
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/12.0.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1763448716943
+    modified: 1763448716943
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1763448716941
+    modified: 1763448716941
+    isPrivate: false
