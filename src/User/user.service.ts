@@ -45,7 +45,7 @@ export class UserService {
   }
 
   async findAll(): Promise<User[]> {
-    return this.userModel.find().exec();
+    return this.userModel.find({ active: true }).exec();
   }
 
   async findOneById(id: string): Promise<User | null> {
@@ -104,6 +104,16 @@ export class UserService {
     }
 
     return updated;
+  }
+
+  async deactivate(id: string): Promise<void> {
+    const updated = await this.userModel
+      .findByIdAndUpdate(id, { active: false }, { new: true })
+      .exec();
+
+    if (!updated) {
+      throw new NotFoundException('User not found');
+    }
   }
 
   async updatePassword(

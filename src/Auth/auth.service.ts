@@ -28,6 +28,12 @@ export class AuthService {
       throw new UnauthorizedException('Invalid credentials');
     }
 
+    if ((user as any).active === false) {
+      throw new UnauthorizedException(
+        'Usuário desativado. Para reativação, entre em contato com o administrativo do Ampara.',
+      );
+    }
+
     return user;
   }
 

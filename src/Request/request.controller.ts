@@ -97,16 +97,18 @@ export class RequestsController {
   }
 
   @Get('helper/active')
-  async findHelperActiveRequests(@Req() req: any): Promise<RequestViewDto[]> {
+  async findHelperActiveRequests(
+    @Req() req: any,
+  ): Promise<RequestHelperViewDto[]> {
     const user = req.user;
 
-    if (!user || user.profile !== 'mediator') {
+    if (!user || user.profile !== 'helper') {
       throw new ForbiddenException(
-        'Only mediator users can access this resource',
+        'Only helper users can access this resource',
       );
     }
 
-    return this.RequestsService.findActiveForMediator();
+    return this.RequestsService.findActiveForHelper();
   }
 
   @Get('mediator/:id')

@@ -140,4 +140,20 @@ export class UserController {
 
     return { message: 'Password updated successfully' };
   }
+
+  @UseGuards(JwtAuthGuard)
+  @Patch('deactivate/:id')
+  async deactivate(@Param('id') id: string): Promise<{ message: string }> {
+    const currentUser = await this.usersService.findOneById(id);
+    if (!currentUser) {
+      throw new NotFoundException('User not found.');
+    }
+
+    await this.usersService.deactivate(id);
+
+    return {
+      message:
+        'Usuário desativado. Para reativação, entre em contato com o administrativo do Ampara.',
+    };
+  }
 }

@@ -54,7 +54,7 @@ function generateHash(value: string): string {
 })
 export class User {
   @Prop({ required: true })
-  name: string;
+  name!: string;
 
   @Prop({
     required: true,
@@ -63,7 +63,7 @@ export class User {
     set: encryptField,
     get: decryptField,
   })
-  email: string;
+  email!: string;
 
   @Prop({
     required: true,
@@ -71,23 +71,23 @@ export class User {
     index: true,
     select: false,
   })
-  emailHash: string;
+  emailHash!: string;
 
   @Prop({
     required: true,
     set: encryptField,
     get: decryptField,
   })
-  phone: string;
+  phone!: string;
 
   @Prop({ unique: true, index: true, select: false })
-  phoneHash: string;
+  phoneHash!: string;
 
   @Prop({ required: true, select: false })
-  password: string;
+  password!: string;
 
   @Prop()
-  description: string;
+  description!: string;
 
   // @Prop({
   //   required: true,
@@ -100,19 +100,22 @@ export class User {
   // documentHash: string;
 
   @Prop({ required: true })
-  birth: Date;
+  birth!: Date;
 
   @Prop()
-  city: string;
+  city!: string;
 
   @Prop()
-  state: string;
+  state!: string;
 
   @Prop({
     required: true,
     enum: ['person', 'mediator', 'helper'],
   })
-  profile: string;
+  profile!: string;
+
+  @Prop({ default: true })
+  active!: boolean;
 
   _id: any;
 }
